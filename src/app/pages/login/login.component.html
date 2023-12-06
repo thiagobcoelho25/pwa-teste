@@ -1,0 +1,42 @@
+<div class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 to-pink-500">
+  <div class="bg-slate-200 p-8 rounded shadow-md md:w-96 w-full">
+    <h2 class="text-2xl font-bold mb-4">Meu Formulário</h2>
+    
+    <form [formGroup]="form_login" (ngSubmit)="login()">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2">
+          Nome de usuário
+        </label>
+        <input
+          class="border rounded w-full py-2 px-3"
+          id="email"
+          type="email"
+          placeholder="Digite seu nome de usuário"
+          required 
+          formControlName="email"
+        />
+      </div>
+      
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+          Senha
+        </label>
+        <input
+          class="border rounded w-full py-2 px-3"
+          id="password"
+          type="password"
+          placeholder="Digite sua senha"
+          type="password"
+          required
+          formControlName="senha"
+        />
+      </div>
+      
+      <button class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-700 w-full" type="submit" [disabled]="!form_login.valid">
+        Enviar
+      </button>
+    </form>
+
+  </div>
+  
+</div>
