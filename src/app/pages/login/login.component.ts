@@ -35,6 +35,7 @@ export class LoginComponent implements OnInit {
           this.openSnackBarErroAPI(err)
         }
       });
+      // this.router.navigate(['home'])
     } else {
       console.log("LOGIN INVALIDO!")
     }
