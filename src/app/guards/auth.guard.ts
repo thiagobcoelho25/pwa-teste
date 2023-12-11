@@ -6,7 +6,6 @@ import { AuthService } from '../services/auth.service';
     const router: Router = inject(Router);
     const authService = inject(AuthService);
 
-    console.log(authService.isLogged())
     if(authService.isLogged()){
       return true
     } else {
